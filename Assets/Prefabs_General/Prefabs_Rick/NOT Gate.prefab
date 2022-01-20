@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1732191073383269140}
   - component: {fileID: 2693696844897523463}
   m_Layer: 6
-  m_Name: NOT_Gate
+  m_Name: NOT Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6623703077553082174}
   - {fileID: 9185942700384658169}
@@ -189,6 +190,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1732191073383269140}
     m_Modifications:
+    - target: {fileID: 4031742610381305241, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
+      propertyPath: m_Name
+      value: Gate 3D Objects
+      objectReference: {fileID: 0}
     - target: {fileID: 4031742610465775628, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -237,6 +242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NOT_Body
       objectReference: {fileID: 0}
+    - target: {fileID: 4031742611536593742, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
+      propertyPath: m_Name
+      value: body
+      objectReference: {fileID: 0}
     - target: {fileID: 4031742611794336080, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
       propertyPath: m_Name
       value: Output
@@ -245,6 +254,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Input
       objectReference: {fileID: 0}
+    - target: {fileID: 7910463542934335194, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
+      propertyPath: material_OR
+      value: 
+      objectReference: {fileID: 2100000, guid: b146127c5638e504a906d54c2e253aa4, type: 2}
+    - target: {fileID: 7910463542934335194, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
+      propertyPath: material_AND
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c8ad0700b828c9488d7cfd4cb773b6b, type: 2}
+    - target: {fileID: 7910463542934335194, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
+      propertyPath: material_NOT
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e93b4b9b0a9f0243a8eaf7bf9561a28, type: 2}
+    - target: {fileID: 7910463542934335194, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
+      propertyPath: material_XOR
+      value: 
+      objectReference: {fileID: 2100000, guid: 1981ff2dc0409c04388224605bd1c8e4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3033e6bcb5ec1e1458ecf8ad307a1e2a, type: 3}
 --- !u!4 &6623703077553082174 stripped
