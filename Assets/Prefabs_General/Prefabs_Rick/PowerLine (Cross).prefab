@@ -122,56 +122,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c51b73f7610b9f42b23fe5ec43ac504, type: 3}
---- !u!1 &1379982389363628185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8127553881841130860, guid: 0c51b73f7610b9f42b23fe5ec43ac504, type: 3}
-  m_PrefabInstance: {fileID: 7200254811867743733}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &826279273274586013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379982389363628185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &3068872968490989102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5294722634038686683, guid: 0c51b73f7610b9f42b23fe5ec43ac504, type: 3}
-  m_PrefabInstance: {fileID: 7200254811867743733}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4851882736986756259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068872968490989102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!4 &5910075779011629059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3596334317666326006, guid: 0c51b73f7610b9f42b23fe5ec43ac504, type: 3}

@@ -54,11 +54,11 @@ public class PowerLine : MonoBehaviour
         foreach(Transform child in Objects.transform){
             if(POWERED){
                 child.GetComponent<MeshRenderer> ().material = material_on;
-                child.GetComponent<Light>().intensity = 0.1f;
+                //child.GetComponent<Light>().intensity = 0.1f;
             }
             else{
                 child.GetComponent<MeshRenderer> ().material = material_off;
-                child.GetComponent<Light>().intensity = 0f;
+                //child.GetComponent<Light>().intensity = 0f;
             }
         }
     }
