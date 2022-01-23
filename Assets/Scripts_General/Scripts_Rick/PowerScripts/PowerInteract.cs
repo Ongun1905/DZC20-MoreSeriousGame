@@ -8,7 +8,8 @@ public class PowerInteract : MonoBehaviour
     public enum InterAction{
         Destroy,
         Rotate,
-        TogglePowerCube
+        TogglePowerCube,
+        ToggleInformation,
     };
 
     public bool PlayerPlaced = false;
@@ -19,11 +20,12 @@ public class PowerInteract : MonoBehaviour
     string Action = "None";
 
     PowerCube PowerCube;
+    Transform Information;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -52,6 +54,15 @@ public class PowerInteract : MonoBehaviour
             if(PowerCube.POWERSTATE){ PowerCube.POWERSTATE= false; }
             else{ PowerCube.POWERSTATE = true; }
             PowerCube.UpdateMaterial(PowerCube.POWERSTATE);
+        }
+        else if(Action.Equals("ToggleInformation")){
+            Information = transform.Find("Information");
+            if(Information.gameObject.activeSelf){
+                Information.gameObject.SetActive(false);
+            }
+            else{
+                Information.gameObject.SetActive(true);
+            }
         }
 
     }

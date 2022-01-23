@@ -141,7 +141,6 @@ public class Player_UI : MonoBehaviour
         
         RaycastHit hit;
         if(Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out hit, PlaceRange, PlayerItemLayer)){
-            Debug.Log(hit.transform.name);
             return hit.transform;
         }
 
