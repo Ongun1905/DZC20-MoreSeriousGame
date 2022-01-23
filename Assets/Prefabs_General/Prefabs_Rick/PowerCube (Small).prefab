@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerCube (Small)
       objectReference: {fileID: 0}
+    - target: {fileID: 3606285673078583972, guid: 8a8d3e9ae89fee1428785d6363de54d5, type: 3}
+      propertyPath: Action_RMB
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4500218507222488114, guid: 8a8d3e9ae89fee1428785d6363de54d5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -65,6 +69,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500218507222488114, guid: 8a8d3e9ae89fee1428785d6363de54d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4627546493723476151, guid: 8a8d3e9ae89fee1428785d6363de54d5, type: 3}
+      propertyPath: DEBUG
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

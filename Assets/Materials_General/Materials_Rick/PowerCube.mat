@@ -10,7 +10,7 @@ Material:
   m_Name: PowerCube
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -109,7 +109,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0, g: 0.24223614, b: 1, a: 1}
     - _Color: {r: 0, g: 0.24223614, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0.0135141, b: 0.2871746, a: 1}
+    - _EmissionColor: {r: 0, g: 0.013514099, b: 0.32884306, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8763841802282238644

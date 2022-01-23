@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7870501103057116827}
-  - component: {fileID: 7870501103718854582}
-  m_Layer: 6
+  - component: {fileID: -8349719223744238699}
+  - component: {fileID: 6143210480003080967}
+  m_Layer: 7
   m_Name: PowerLine (Cross)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7870501103718854582
+--- !u!114 &-8349719223744238699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,13 +43,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7870501103718854583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a1f6e6afec8d94ba6b1897e5ca9580, type: 3}
+  m_Script: {fileID: 11500000, guid: 3766d0ae8d624744bab29bccbb701879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
-  StepSize: 1
-  NegativeDirection: 0
-  direction: 0
+  PlayerPlaced: 0
+  Action_LMB: 0
+  Action_RMB: 1
+--- !u!65 &6143210480003080967
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870501103718854583}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.1, z: 1}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1001 &7200254811867743733
 PrefabInstance:
   m_ObjectHideFlags: 0

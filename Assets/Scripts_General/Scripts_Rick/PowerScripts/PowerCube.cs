@@ -5,11 +5,18 @@ using UnityEngine;
 public class PowerCube : MonoBehaviour
 {
     PowerObject PowerObject;
+    public bool POWERSTATE = true;
+
+    public Material material_off;
+    public Material material_on;
+
+    Transform Objects;
 
     // Start is called before the first frame update
     void Start()
     {
         PowerObject = GetComponent<PowerObject>();
+        Objects = transform.Find("3D Objects");
     }
 
     // Update is called once per frame
@@ -18,9 +25,20 @@ public class PowerCube : MonoBehaviour
         if(GetComponent<PowerUpdate>().UPDATE){
             GetComponent<PowerUpdate>().UPDATE = false;
             PowerObject.UpdateConnections();
-            PowerObject.PulseConnections(PowerObject.Connections, null);
+            if(POWERSTATE){ PowerObject.PulseConnections(PowerObject.Connections, null);}
         }
 
+    }
+
+    public void UpdateMaterial(bool POWERSTATE){
+        foreach(Transform child in Objects.transform){
+            if(POWERSTATE){
+                child.GetComponent<MeshRenderer> ().material = material_on;
+            }
+            else{
+                child.GetComponent<MeshRenderer> ().material = material_off;
+            }
+        }
     }
 
 }
