@@ -261,7 +261,7 @@ MonoBehaviour:
   material_on: {fileID: 2100000, guid: df05ad5e1ba2b274f90029c3f2c4d52c, type: 2}
   POWERED: 0
   lastPower: 0
-  expectedUpdateFrequency: 0.5
+  expectedUpdateFrequency: 0.25
 --- !u!1 &3051917175685812574
 GameObject:
   m_ObjectHideFlags: 0
