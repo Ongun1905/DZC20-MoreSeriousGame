@@ -6,9 +6,6 @@ public class Rick_PlayerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
-    public Transform groundCheck;
-    public float groundDistance = 0.2f;
-    public LayerMask groundMask;
 
     public float speed = 10f;
     private float gravity = -9.81f;
@@ -17,7 +14,6 @@ public class Rick_PlayerMovement : MonoBehaviour
 
 
     public Vector3 velocity;
-    bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +24,6 @@ public class Rick_PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -41,17 +34,21 @@ public class Rick_PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
-
-        if(isGrounded){
+        
+        if(velocity.y == 0.0f){
             if(velocity.y < 0){
                 velocity.y = -2f;
             }
-            if(Input.GetButtonDown("Jump")){
-            velocity.y = Mathf.Sqrt(jumpheight * 2f * -gravity * gravityWeight);
+            if(Input.GetKey(KeyCode.Space)){
+                velocity.y = Mathf.Sqrt(jumpheight * 2f * -gravity * gravityWeight);
             }
         }
         else{
             velocity.y += gravity * gravityWeight * Time.deltaTime;
+        }
+
+        if(velocity.y < -10.0f){
+            velocity.y = 0.0f;
         }
 
         controller.Move(velocity * Time.deltaTime);
