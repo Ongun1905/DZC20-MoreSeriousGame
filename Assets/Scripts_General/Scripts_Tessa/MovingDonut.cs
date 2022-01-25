@@ -41,7 +41,7 @@ public class MovingDonut : MonoBehaviour
         if(d > 3f){
             lastTime = Time.time;
         } else if(Time.time - lastTime >= 1.5f){
-            print("End Level");
+            print("End Level: See Script MovingDonut");
         }
        
     }
