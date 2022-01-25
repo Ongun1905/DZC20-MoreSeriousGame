@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerHandle : MonoBehaviour
 {
+    PowerUpdate PowerUpdate;
 
     [Range(0.0F, 1F)]public float updatefrequency = 1F; //The amound of time (seconds) between each update
     private float lastUpdate = 0;
@@ -22,7 +23,10 @@ public class PowerHandle : MonoBehaviour
         if(lastUpdate > updatefrequency){
             foreach(Transform child in transform){
                 foreach(Transform component in child){
-                        component.GetComponent<PowerUpdate>().UPDATE = true;
+                    PowerUpdate = component.GetComponent<PowerUpdate>();
+                    if(PowerUpdate != null){
+                        PowerUpdate.UPDATE = true;
+                    }
                 }
             }
             lastUpdate = 0;
