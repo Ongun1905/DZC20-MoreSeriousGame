@@ -30,6 +30,12 @@ public class PowerPuzzleCheck : MonoBehaviour
 
     public bool TestPassed;
 
+    public Material test_loading;
+    public Material test_passed;
+    public Material test_failed;
+
+    public Transform Screen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +48,7 @@ public class PowerPuzzleCheck : MonoBehaviour
         if(ButtonInteract.ButtonPressed){
             ButtonInteract.ButtonPressed = false;
             testing = true;
+            Screen.GetComponent<MeshRenderer> ().material = test_loading;
         }
         if(testing){ TestConnections(); }
     }
@@ -152,10 +159,12 @@ public class PowerPuzzleCheck : MonoBehaviour
                 SetInput(0);
                 if(correctInputs == testAmount){
                     TestPassed = true;
+                    Screen.GetComponent<MeshRenderer> ().material = test_passed;
                     Portal.SetActive(true);
                 }
                 else{
                     TestPassed = false;
+                    Screen.GetComponent<MeshRenderer> ().material = test_failed;
                     Portal.SetActive(false);
                 }
                 correctInputs = 0;
