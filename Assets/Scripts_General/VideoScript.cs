@@ -31,7 +31,7 @@ public class VideoScript : MonoBehaviour
         videoPlayer.frame = 100;
 
         // Restart from beginning when done.
-        videoPlayer.isLooping = true;
+        videoPlayer.isLooping = false;
 
         // Each time we reach the end, we slow down the playback by a factor of 10.
         videoPlayer.loopPointReached += EndReached;
@@ -45,6 +45,6 @@ public class VideoScript : MonoBehaviour
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
     }
 }

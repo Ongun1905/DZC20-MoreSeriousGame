@@ -18,9 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes_General/Scenes_Tessa/LevelTime.unity
     guid: 7cee4af0230ede54db5788a1b3b68513
   - enabled: 1
+    path: Assets/Scenes_General/Scenes_Ongun/DonutScene 1.unity
+    guid: b185f849f0bb0094c8148236bff904cd
+  - enabled: 1
     path: Assets/Scenes_General/Scenes_Niels/GravityLevel.unity
     guid: 7410f4b578a397649ab6616d00cdc6e7
   - enabled: 1
+    path: Assets/Scenes_General/Scenes_Ongun/DonutScene 2.unity
+    guid: 75cd3d85952642b41b9ea653436fddab
+  - enabled: 1
     path: Assets/Scenes_General/Scenes_Rick/Logic Puzzles.unity
     guid: a5e7c79f6561fda44bb7888adf828a53
+  - enabled: 1
+    path: Assets/Scenes_General/Scenes_Ongun/EndScene.unity
+    guid: f239a7c77e2553f4fb387482bfd8319a
   m_configObjects: {}
