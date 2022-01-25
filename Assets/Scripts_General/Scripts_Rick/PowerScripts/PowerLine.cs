@@ -8,7 +8,6 @@ public class PowerLine : MonoBehaviour
     public Material material_off;
     public Material material_on;
 
-    [HideInInspector]
     public bool POWERED = false; //The power state of the PowerLine
 
     [HideInInspector]

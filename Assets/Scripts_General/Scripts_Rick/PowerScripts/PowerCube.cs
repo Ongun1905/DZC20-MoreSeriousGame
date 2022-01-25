@@ -17,6 +17,7 @@ public class PowerCube : MonoBehaviour
     {
         PowerObject = GetComponent<PowerObject>();
         Objects = transform.Find("3D Objects");
+        UpdateMaterial(POWERSTATE);
     }
 
     // Update is called once per frame

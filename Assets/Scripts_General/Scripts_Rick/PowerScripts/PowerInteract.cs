@@ -10,6 +10,7 @@ public class PowerInteract : MonoBehaviour
         Rotate,
         TogglePowerCube,
         ToggleInformation,
+        Button
     };
 
     public bool PlayerPlaced = false;
@@ -21,6 +22,8 @@ public class PowerInteract : MonoBehaviour
 
     PowerCube PowerCube;
     Transform Information;
+
+    public bool ButtonPressed;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +66,9 @@ public class PowerInteract : MonoBehaviour
             else{
                 Information.gameObject.SetActive(true);
             }
+        }
+        else if(Action.Equals("Button")){
+            ButtonPressed = true;
         }
 
     }

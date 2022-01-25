@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPlaced: 0
-  Action_LMB: 0
+  Action_LMB: 2
   Action_RMB: 2
 --- !u!65 &361023517818394097
 BoxCollider:
