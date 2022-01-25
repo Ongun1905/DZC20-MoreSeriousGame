@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4524971619140253834}
-  - component: {fileID: 4474275756668973457}
-  m_Layer: 0
+  - component: {fileID: 7936922639604208695}
+  - component: {fileID: 4998762061201878126}
+  m_Layer: 7
   m_Name: XOR Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +37,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4474275756668973457
+--- !u!114 &7936922639604208695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,13 +46,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4524971619140253835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a1f6e6afec8d94ba6b1897e5ca9580, type: 3}
+  m_Script: {fileID: 11500000, guid: 3766d0ae8d624744bab29bccbb701879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
-  StepSize: 1
-  NegativeDirection: 0
-  direction: 0
+  PlayerPlaced: 0
+  Action_LMB: 0
+  Action_RMB: 1
+--- !u!65 &4998762061201878126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524971619140253835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.1, z: 1}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1001 &762185947426350977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4694496703771004576, guid: e9f65e30747eeaa448993a1cbedaee49, type: 3}
+      propertyPath: connectionRange
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f65e30747eeaa448993a1cbedaee49, type: 3}
 --- !u!4 &1717487261383640507 stripped
@@ -193,7 +210,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6031264683848937855, guid: 9c2876726946c8249b02b13339910aac, type: 3}
       propertyPath: type
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6832420664378649228, guid: 9c2876726946c8249b02b13339910aac, type: 3}
       propertyPath: m_Name

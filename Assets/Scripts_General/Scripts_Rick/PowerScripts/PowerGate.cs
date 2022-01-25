@@ -26,10 +26,16 @@ public class PowerGate : MonoBehaviour
 
     Transform Body;
 
+    public Transform PowerArrow;
+    PowerArrow PowerArrowComponent;
+
+    bool GateState;
+
     // Start is called before the first frame update
     void Start()
     {
         PowerObject = GetComponent<PowerObject>();
+        PowerArrowComponent = PowerArrow.GetComponent<PowerArrow>();
         Body = transform.Find("Gate 3D Objects");
         UpdateGateMaterial(type.ToString());
     }
@@ -40,10 +46,11 @@ public class PowerGate : MonoBehaviour
         if(GetComponent<PowerUpdate>().UPDATE){
             GetComponent<PowerUpdate>().UPDATE = false;
             PowerObject.UpdateConnections();
-            //UpdateGateMaterial(type.ToString());
-            if(PowerObject.GetGateState(type.ToString())){
+            GateState = PowerObject.GetGateState(type.ToString());
+            if(GateState){
                 PowerObject.PulseConnections(PowerObject.Connections, null);
             }
+            PowerArrowComponent.UpdateArrow(GateState);
         }
     }
 
