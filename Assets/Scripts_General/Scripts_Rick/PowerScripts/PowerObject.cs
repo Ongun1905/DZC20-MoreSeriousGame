@@ -8,6 +8,9 @@ public class PowerObject : MonoBehaviour
     [Header("Layer")]  //Set the layer where all logic Objects can be found. (Create a new Layer named logic, and add all logic objects to this layer)
     public LayerMask logicLayer;
 
+    [Header("Connection Range")]
+    [Range(0f,1f)]public float connectionRange = 1f;
+
     [HideInInspector]
     public Transform Connections;
 
@@ -63,7 +66,7 @@ public class PowerObject : MonoBehaviour
         Transform closest = null;
         float distance = 0F;
 
-        hits = Physics.RaycastAll(connection.parent.position, new Vector3(connection.position.x - connection.parent.position.x, 0, connection.position.z - connection.parent.position.z).normalized, 1, logicLayer);
+        hits = Physics.RaycastAll(connection.parent.position, new Vector3(connection.position.x - connection.parent.position.x, 0, connection.position.z - connection.parent.position.z).normalized, connectionRange, logicLayer);
         foreach(RaycastHit hit in hits){
             if(hit.transform.parent.parent != connection.parent.parent){
                 if(closest == null || distance > hit.distance){

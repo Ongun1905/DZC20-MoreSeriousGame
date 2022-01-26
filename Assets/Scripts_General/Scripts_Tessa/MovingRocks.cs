@@ -14,7 +14,7 @@ public class MovingRocks : MonoBehaviour
     void Start()
     {
         p0 = transform.position;
-        p1 = new Vector3(-52f, 22f, 52f);
+        p1 = new Vector3(-51f, 22f, 43f);
         speed = 3f;
         timeControl = GameObject.Find("Levels").GetComponent<TimeControl>();
         reversedTime = false;
