@@ -839,6 +839,10 @@ PrefabInstance:
       propertyPath: portalTrigger
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 455916589166972726, guid: 9832aad9961e7334b8314662b36c3671, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 761904834645513567, guid: 9832aad9961e7334b8314662b36c3671, type: 3}
       propertyPath: m_Name
       value: Boole
@@ -1005,6 +1009,10 @@ PrefabInstance:
       propertyPath: einsteinCutscene
       value: 
       objectReference: {fileID: 651502245}
+    - target: {fileID: 6926294321507159, guid: 39124d7b54eac8148bf4b50edeb3f18f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 545535960992410500, guid: 39124d7b54eac8148bf4b50edeb3f18f, type: 3}
       propertyPath: m_RootOrder
       value: 2
