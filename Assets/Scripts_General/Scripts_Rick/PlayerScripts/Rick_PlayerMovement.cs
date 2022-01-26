@@ -12,7 +12,6 @@ public class Rick_PlayerMovement : MonoBehaviour
     public float gravityWeight = 2f;
     public float jumpheight = 2f;
 
-
     public Vector3 velocity;
 
     // Start is called before the first frame update
@@ -34,8 +33,8 @@ public class Rick_PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
-        
-        if(velocity.y == 0.0f){
+
+        if(controller.isGrounded){
             if(velocity.y < 0){
                 velocity.y = -2f;
             }
@@ -47,11 +46,6 @@ public class Rick_PlayerMovement : MonoBehaviour
             velocity.y += gravity * gravityWeight * Time.deltaTime;
         }
 
-        if(velocity.y < -10.0f){
-            velocity.y = 0.0f;
-        }
-
         controller.Move(velocity * Time.deltaTime);
-
     }
 }
