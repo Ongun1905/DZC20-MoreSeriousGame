@@ -36,11 +36,15 @@ public class MovingDonut : MonoBehaviour
         if(transform.position == p1 || transform.position == p0){
             up = !up;
         }
+
+        Vector3 e = GameObject.Find("LogicPlayer").transform.position;
+        Vector3 u = GameObject.Find("Church").transform.position;
+        float d_eu = Vector3.Distance(u, e);
         Vector3 pf = new Vector3(-275.7f, 34.7f, 120.4f);
         float d = Vector3.Distance(transform.position, pf);
         if(d > 3f){
             lastTime = Time.time;
-        } else if(Time.time - lastTime >= 1.5f){
+        } else if(Time.time - lastTime >= 1.5f && d_eu < 40f){
             print("End Level: See Script MovingDonut");
         }
        
