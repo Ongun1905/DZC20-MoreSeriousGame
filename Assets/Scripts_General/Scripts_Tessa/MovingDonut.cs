@@ -10,6 +10,12 @@ public class MovingDonut : MonoBehaviour
     float speed; // higher is faster
     TimeControl timeControl;
     float lastTime;
+    GameObject quad;
+    float d_eu;
+    Vector3 pf;
+    float d;
+    GameObject logicPlayer;
+    GameObject church;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +26,11 @@ public class MovingDonut : MonoBehaviour
         up = true;
         timeControl = GameObject.Find("Levels").GetComponent<TimeControl>();
         lastTime = Time.time;
+        quad = GameObject.Find("Quad");
+        quad.gameObject.SetActive(false);
+        pf = new Vector3(-275.7f, 34.7f, 120.4f);
+        logicPlayer = GameObject.Find("LogicPlayer");
+        church = GameObject.Find("Church");
     }
 
     // Update is called once per frame
@@ -37,15 +48,14 @@ public class MovingDonut : MonoBehaviour
             up = !up;
         }
 
-        Vector3 e = GameObject.Find("LogicPlayer").transform.position;
-        Vector3 u = GameObject.Find("Church").transform.position;
-        float d_eu = Vector3.Distance(u, e);
-        Vector3 pf = new Vector3(-275.7f, 34.7f, 120.4f);
-        float d = Vector3.Distance(transform.position, pf);
+        Vector3 e = logicPlayer.transform.position;
+        Vector3 u = church.transform.position;
+        d_eu = Vector3.Distance(u, e);
+        d = Vector3.Distance(transform.position, pf);
         if(d > 3f){
             lastTime = Time.time;
         } else if(Time.time - lastTime >= 1.5f && d_eu < 40f){
-            print("End Level: See Script MovingDonut");
+            quad.gameObject.SetActive(true);
         }
        
     }
