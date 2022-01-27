@@ -10263,6 +10263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 397610610809742852, guid: d8408a8160310ad4d8354fe7c55c8adb, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 397610610809742859, guid: d8408a8160310ad4d8354fe7c55c8adb, type: 3}
       propertyPath: m_RootOrder
       value: 0
