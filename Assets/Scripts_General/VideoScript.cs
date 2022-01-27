@@ -25,7 +25,7 @@ public class VideoScript : MonoBehaviour
 
         // Set the video to play. URL supports local absolute or relative paths.
         // Here, using absolute.
-        videoPlayer.url = "Assets/Backgroundstory_FINAL.mp4";
+        //videoPlayer.url = Resources.Load("Backgroundstory_FINAL.mp4");
 
         // Skip the first 100 frames.
         videoPlayer.frame = 100;
